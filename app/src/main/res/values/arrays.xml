@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>阿拉伯语</item>
+        <item>爱沙尼亚语</item>
+        <item>保加利亚语</item>
+        <item>波兰语</item>
+        <item>丹麦语</item>
+        <item>德语</item>
+        <item>俄语</item>
+        <item>法语</item>
+        <item>芬兰语</item>
+        <item>韩语</item>
+        <item>荷兰语</item>
+        <item>捷克语</item>
+        <item>罗马尼亚语</item>
+        <item>葡萄牙语</item>
+        <item>日语</item>
+        <item>瑞典语</item>
+        <item>斯洛文尼亚语</item>
+        <item>泰语</item>
+        <item>文言文</item>
+        <item>西班牙语</item>
+        <item>希腊语</item>
+        <item>匈牙利语</item>
+        <item>中文</item>
+        <item>英语</item>
+        <item>意大利语</item>
+        <item>粤语</item>
+        <item>中文繁体</item>
+    </string-array>
+    <string-array name="languages_simple">
+        <item>ara</item>
+        <item>est</item>
+        <item>bul</item>
+        <item>pl</item>
+        <item>dan</item>
+        <item>de</item>
+        <item>ru</item>
+        <item>fra</item>
+        <item>fin</item>
+        <item>kor</item>
+        <item>nl</item>
+        <item>cs</item>
+        <item>rom</item>
+        <item>pt</item>
+        <item>jp</item>
+        <item>swe</item>
+        <item>slo</item>
+        <item>th</item>
+        <item>wyw</item>
+        <item>spa</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>zh</item>
+        <item>en</item>
+        <item>it</item>
+        <item>yue</item>
+        <item>cht</item>
+    </string-array>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MetroView">
+        <attr name="metroSize" format="integer"/>
+        <attr name="metroImage" format="reference"/>
+        <attr name="metroText" format="string"/>
+        <attr name="metroTextColor" format="color"/>
+        <attr name="metroBackground" format="color"/>
+        <attr name="metroPackageName" format="string"/>
+        <attr name="metroAction" format="string"/>
+        <attr name="metroUri" format="string"/>
+        <attr name="metroCategory" format="string"/>
+        <attr name="metroPackageArray" format="boolean"/>
+    </declare-styleable>
+
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+    <declare-styleable name="OperationItemView">
+        <attr name="operationImage" format="reference"/>
+        <attr name="operationText" format="string"/>
+        <attr name="operationPackageName" format="string"/>
+        <attr name="operationAction" format="string"/>
+        <attr name="operationUri" format="string"/>
+        <attr name="operationCategory" format="string"/>
+    </declare-styleable>
+</resources>
