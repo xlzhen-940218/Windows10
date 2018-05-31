@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true" android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#afafaf"/>
+            <solid android:color="@color/color_3f"/>
+        </shape>
+    </item>
+    <item android:drawable="@color/color_3f"/>
+</selector>
