@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="鸣谢以下github开源的作者"
+                android:textColor="#003399"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/github1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:padding="5dp"
+                android:text="com.squareup.okhttp3:okhttp:3.7.0"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github1"
+                android:padding="5dp"
+                android:text="com.liulishuo.filedownloader:library:1.3.0"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github2"
+                android:padding="5dp"
+                android:text="pub.devrel:easypermissions:1.2.0"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github3"
+                android:padding="5dp"
+                android:text="cn.bingoogolapple:bga-refreshlayout:1.1.8"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github4"
+                android:padding="5dp"
+                android:text="https://github.com/alibaba/fastjson"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github5"
+                android:padding="5dp"
+                android:text="https://github.com/nostra13/Android-Universal-Image-Loader"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github6"
+                android:padding="5dp"
+                android:text="https://github.com/j256/ormlite-android"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github7"
+                android:padding="5dp"
+                android:text="https://github.com/chrisbanes/PhotoView"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github8"
+                android:padding="5dp"
+                android:text="https://github.com/MiCode/FileExplorer"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/github10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github9"
+                android:padding="5dp"
+                android:text="https://github.com/belerweb/pinyin4j"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/github11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github10"
+                android:padding="5dp"
+                android:text="https://www.coolapk.com/u/1354403"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/github12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github11"
+                android:padding="5dp"
+                android:text="https://www.coolapk.com/u/1354403"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/github13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github12"
+                android:padding="5dp"
+                android:text="http://www.coolapk.com/u/771599"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/github14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github13"
+                android:padding="5dp"
+                android:text="http://www.coolapk.com/u/1116007"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/github15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github14"
+                android:padding="5dp"
+                android:text="http://www.coolapk.com/u/1071418"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text="感谢所有酷安用户的建议和反馈，真诚感谢！！！有需要上榜的同志酷安私聊我哦！"
+                android:layout_below="@+id/github15"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="600dp"
+                android:layout_below="@+id/github10"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

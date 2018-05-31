@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/goBack"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edge_menu_item_bg"
+        android:padding="10dp"
+        android:src="@mipmap/arrow_back_no_press" />
+
+    <ImageView
+        android:id="@+id/goForward"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignTop="@+id/goBack"
+        android:layout_toRightOf="@+id/goBack"
+        android:background="@drawable/edge_menu_item_bg"
+        android:padding="10dp"
+        android:src="@mipmap/arrow_forward_no_press" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_f2"
+        android:layout_alignTop="@+id/goBack"
+        android:layout_toLeftOf="@+id/goRefresh"
+        android:layout_toRightOf="@+id/goForward">
+        <EditText
+            android:id="@+id/edgeLink"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_margin="2dp"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:imeOptions="actionGo"
+            android:background="@drawable/edge_link_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="https://www.microsoft.com"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/goRefresh"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/goBack"
+        android:background="@drawable/edge_menu_item_bg"
+        android:padding="10dp"
+        android:src="@mipmap/refresh" />
+    <com.xpping.windows10.widget.AppWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/goBack"/>
+</RelativeLayout>

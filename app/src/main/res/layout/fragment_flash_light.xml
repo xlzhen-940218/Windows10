@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/flashLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="我是手电筒
+我现在
+是关
+着的
+请点
+击打
+开手
+电筒
+打开
+我就
+亮了哦"
+                android:textColor="@color/color_33"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/flashLightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flashLight"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="40dp"
+                android:background="@drawable/btn_bottom"
+                android:padding="15dp"
+                android:text="打开手电筒"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="800dp"
+                android:layout_below="@+id/flashLightButton"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

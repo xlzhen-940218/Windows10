@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="调整计算机的设置"
+                android:textColor="#003399"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/windows_wallpaper_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="横屏壁纸"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/windows_wallpaper_title"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/windows_wallpaper_title"
+                android:background="#ccc" />
+
+            <TextView
+                android:id="@+id/windows_wallpaper_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_wallpaper_title"
+                android:padding="10dp"
+                android:text="Windows 横屏壁纸预览"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/wallpaperBackground"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/windows_wallpaper_preview"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/windows_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wallpaperBackground"
+                android:text="桌面图标设置"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/windows_icon"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/windows_icon"
+                android:background="#ccc" />
+
+            <Switch
+                android:id="@+id/desktop_icon_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_icon"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="图标(显示)" />
+
+            <TextView
+                android:id="@+id/desktop_icon_hor_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desktop_icon_switch"
+                android:padding="10dp"
+                android:text="桌面图标大小调整(竖屏)"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/desktop_icon_size_hor_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desktop_icon_hor_size"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/desktop_icon_ver_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desktop_icon_size_hor_seekbar"
+                android:padding="10dp"
+                android:text="桌面图标大小调整(横屏)"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/desktop_icon_size_ver_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desktop_icon_ver_size"
+                android:padding="10dp" />
+            <TextView
+                android:id="@+id/lock_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desktop_icon_size_ver_seekbar"
+                android:text="锁屏设置"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/lock_setting"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/lock_setting"
+                android:background="#ccc" />
+
+            <Switch
+                android:id="@+id/lock_show_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lock_setting"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="进入桌面前看到锁屏(开启)" />
+
+            <TextView
+                android:id="@+id/windows_lock_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lock_show_switch"
+                android:padding="10dp"
+                android:text="Windows 横屏锁屏预览"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/lock_lan_Background"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/windows_lock_preview"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/windows_lock_pro_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lock_lan_Background"
+                android:padding="10dp"
+                android:text="Windows 默认锁屏预览"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/lock_pro_Background"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/windows_lock_pro_preview"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/statusBar_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lock_pro_Background"
+                android:text="状态栏显示隐藏"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/statusBar_type"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/statusBar_type"
+                android:background="#ccc" />
+
+            <Switch
+                android:id="@+id/statusBarSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusBar_type"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="(显示)状态栏" />
+            <TextView
+                android:id="@+id/startMenu_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusBarSwitch"
+                android:text="开始菜单设定"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/startMenu_type"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/startMenu_type"
+                android:background="#ccc" />
+
+            <Switch
+                android:id="@+id/showFirstAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startMenu_type"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="(显示)最近添加APP" />
+            <RelativeLayout
+                android:id="@+id/startMenu_Rect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/showFirstAdd"
+                android:background="@drawable/control_startmenu_bg">
+
+                <TextView
+                    android:id="@+id/startMenuDemo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="开始菜单模型"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="#99000000"/>
+                <Switch
+                    android:id="@+id/orientationChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/startMenuDemo"
+                    android:layout_centerHorizontal="true"
+                    android:checked="true"
+                    android:padding="10dp"
+                    android:text="开始菜单(竖)屏设置" />
+                <TextView
+                    android:id="@+id/start_menu_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orientationChange"
+                    android:padding="10dp"
+                    android:text="开始菜单宽度调整"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/start_menu_width_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/start_menu_width"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/start_menu_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/start_menu_width_seekBar"
+                    android:padding="10dp"
+                    android:text="开始菜单高度调整"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/start_menu_height_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/start_menu_height"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/operation_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/startMenu_Rect"
+                android:text="操作中心设定"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/operation_type"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/operation_type"
+                android:background="#ccc" />
+
+            <Switch
+                android:id="@+id/enableTablet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/operation_type"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="手机也可以(启用)平板模式" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

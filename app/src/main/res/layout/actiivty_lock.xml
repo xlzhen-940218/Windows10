@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xpping.windows10.widget.LockView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wallpaperBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/hour_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/month_day_week"
+        android:fontFamily="sans-serif-thin"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="12:00"
+        android:textColor="@android:color/white"
+        android:textSize="52sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/month_day_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="5月12日，星期六"
+        android:textColor="@android:color/white"
+        android:textSize="28sp" />
+</com.xpping.windows10.widget.LockView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="查看有关计算机的基本信息"
+                android:textColor="#003399"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/windows_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="Windows 版本"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/windows_version_title"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/windows_version_title"
+                android:background="#ccc" />
+
+            <ImageView
+                android:id="@+id/pc_details_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_version_title"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@mipmap/pc_details_message" />
+
+            <TextView
+                android:id="@+id/windows_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pc_details_img"
+                android:padding="10dp"
+                android:text="Windows 10 Desktop By Android XPP"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windows_version_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_version"
+                android:paddingLeft="10dp"
+                android:text="© 2018 XPP Corporation。保留所有权利。"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windows_system_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_version_content"
+                android:text="系统"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/windows_system_title"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/windows_system_title"
+                android:background="#ccc" />
+
+            <TextView
+                android:id="@+id/windows_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_system_title"
+                android:padding="10dp"
+                android:text="处理器：骁龙845"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windows_memory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_cpu"
+                android:paddingLeft="10dp"
+                android:text="已安装的内存(RAM)：6.0GB"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windows_system_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_memory"
+                android:padding="10dp"
+                android:text="系统类型：64位操作系统，基于x64的处理器"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windows_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/windows_system_type"
+                android:text="计算机名"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/windows_name_title"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/windows_name_title"
+                android:background="#ccc" />
+
+            <TextView
+                android:id="@+id/windows_name"
+                android:layout_width="wrap_content"
+                android:layout_height="800dp"
+                android:layout_below="@+id/windows_name_title"
+                android:padding="10dp"
+                android:text="计算机名：MIX 2S"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.escapevirus.GameActivity">
+
+    <com.escapevirus.widget.GameView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/maskView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000" />
+    <RelativeLayout
+        android:id="@+id/modeSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/superSimpleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_05a6f0_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="小白模式"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/simpleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_05a6f0_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="简单模式"
+            android:layout_below="@+id/superSimpleButton"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/easyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_81bc06_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="轻松模式"
+            android:layout_below="@+id/simpleButton"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/difficultyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_ffba08_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="困难模式"
+            android:layout_below="@+id/easyButton"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/infernalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_f35325_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="地狱模式"
+            android:layout_below="@+id/difficultyButton"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/showScoreAndResetPlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/modeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地狱模式"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp"
+            android:layout_above="@+id/scoreTitle"
+            android:textColor="#ff0000"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/scoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/score"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:text="SCORE"
+            android:textSize="52sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:text="10"
+            android:textSize="65sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/resetPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_f35325_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="重试"
+            android:layout_above="@+id/shareGame"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/shareGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_05a6f0_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="分享游戏"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</RelativeLayout>
+

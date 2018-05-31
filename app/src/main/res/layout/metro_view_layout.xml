@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="20dp"
+        android:src="@mipmap/email"
+        android:scaleType="centerInside"
+        android:background="@color/color_56"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="邮件"
+        android:textSize="9sp"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:padding="3dp"/>
+    <View
+        android:id="@+id/metroView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/metro_view_item_bg"/>
+</RelativeLayout>

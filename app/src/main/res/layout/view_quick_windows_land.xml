@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <View
+        android:id="@+id/view_centerHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/view_centerHorizontal"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/weather_relative"
+            android:layout_width="match_parent"
+            android:layout_weight="0.6"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/weather_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/quick_card_header_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:text="天气"
+                android:textColor="@color/color_56" />
+
+            <ImageView
+                android:id="@+id/weather_title_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@mipmap/weather_icon" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/weather_title"
+                android:background="@drawable/quick_card_content_bg">
+                <TextView
+                    android:id="@+id/weather_degree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="21°"
+                    android:textColor="#222222"
+                    android:textSize="58sp" />
+
+                <TextView
+                    android:id="@+id/weather_county"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/weather_degree"
+                    android:paddingLeft="100dp"
+                    android:paddingTop="14dp"
+                    android:text="杭州市"
+                    android:textColor="#444444"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/weather_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_county"
+                    android:paddingLeft="100dp"
+                    android:paddingTop="2dp"
+                    android:text="阵雨"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/weather_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/weather_degree"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/weather_03" />
+            </RelativeLayout>
+           
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/shortcut_relative"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/shortcut_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/quick_card_header_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:text="快捷方式"
+                android:textColor="@color/color_56" />
+
+            <ImageView
+                android:id="@+id/shortcut_title_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@mipmap/shortcut_icon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/shortcut_title"
+                android:background="@drawable/quick_card_content_bg"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/wx_self_qr_code"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/alipay_fukuan"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/wx_self_qr_code" />
+
+                <ImageView
+                    android:id="@+id/alipay_fukuan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/alipay_fukuan" />
+
+                <ImageView
+                    android:id="@+id/wx_fukuan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/alipay_fukuan"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/wx_fukuan" />
+
+                <ImageView
+                    android:id="@+id/function_qq_scan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/alipay_fukuan"
+                    android:layout_below="@+id/alipay_fukuan"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/function_qq_scan" />
+
+                <ImageView
+                    android:id="@+id/wx_shoukuan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/function_qq_scan"
+                    android:layout_toLeftOf="@+id/alipay_scan"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/wx_shoukuan" />
+
+                <ImageView
+                    android:id="@+id/alipay_scan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/wx_shoukuan"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/alipay_scan" />
+
+                <ImageView
+                    android:id="@+id/wx_scan"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/wx_shoukuan"
+                    android:layout_toRightOf="@+id/alipay_scan"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@mipmap/wx_scan" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/douban_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/view_centerHorizontal">
+
+
+        <TextView
+            android:id="@+id/douban_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/quick_card_header_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:text="影院热映"
+            android:textColor="@color/color_56" />
+
+        <ImageView
+            android:id="@+id/douban_title_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@mipmap/douban_icon" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/douban_title"
+            android:background="@drawable/quick_card_content_bg">
+
+            <com.xpping.windows10.widget.AppWebView
+                android:id="@+id/doubanWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

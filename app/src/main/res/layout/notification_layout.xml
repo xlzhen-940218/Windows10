@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notificationOpen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="5dp"
+        android:src="@mipmap/windows10_logo"/>
+    <TextView
+        android:id="@+id/notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_margin="5dp"
+        android:text="标题"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@+id/icon"/>
+    <TextView
+        android:id="@+id/notificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white"
+        android:layout_alignLeft="@+id/notificationTitle"
+        android:layout_below="@+id/notificationTitle"
+        android:text="内容"/>
+</RelativeLayout>

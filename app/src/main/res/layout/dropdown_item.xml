@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dropdown_item_bg">
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/sdcard_built_in"/>
+
+    <TextView
+        android:id="@+id/path_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/item_icon"
+        android:singleLine="true"
+        android:text="/mnt/sdcard/"
+        android:textSize="20sp"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

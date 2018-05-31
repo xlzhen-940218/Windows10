@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/headName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/windows_menu_item_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="最近添加"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/appItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_below="@+id/headName"
+        android:background="@drawable/windows_menu_item_bg">
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/appIcon"
+            android:layout_toRightOf="@+id/appIcon"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="腾讯QQ"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

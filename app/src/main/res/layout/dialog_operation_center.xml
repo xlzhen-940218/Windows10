@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp"
+    android:layout_height="match_parent"
+    android:background="#9f000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/noticeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="没有新的通知(去开启通知权限)"
+        android:textColor="#bbb"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/noticeEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="也许，变成坏蛋，才能了无牵挂，才会不厌世吧"
+        android:textColor="#bbb"
+        android:textSize="3sp"
+        android:layout_below="@+id/noticeTitle"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/noticeEgg"
+        android:layout_above="@+id/operation_center_button"/>
+
+    <TextView
+        android:id="@+id/operation_center_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/operation_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:text="折叠"
+        android:textColor="@drawable/operation_button_bg"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/operation_clear_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/operation_center"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:text="全部清除"
+        android:layout_alignParentRight="true"
+        android:textColor="@drawable/operation_button_bg"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/operation_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/tablet_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:operationImage="@mipmap/tablet_mode"
+            app:operationText="平板模式" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tablet_mode"
+            app:operationAction="android.settings.SETTINGS"
+            app:operationImage="@mipmap/setting_simple"
+            app:operationText="所有设置" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/setting"
+            app:operationAction="android.settings.LOCATION_SOURCE_SETTINGS"
+            app:operationImage="@mipmap/location"
+            app:operationText="定位" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/vpn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/location"
+            app:operationAction="android.net.vpn.SETTINGS"
+            app:operationImage="@mipmap/vpn"
+            app:operationText="VPN" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tablet_mode"
+            android:layout_marginTop="5dp"
+            app:operationAction="android.settings.BLUETOOTH_SETTINGS"
+            app:operationImage="@mipmap/bluetooth"
+            app:operationText="蓝牙" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/wlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bluetooth"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/bluetooth"
+            app:operationAction="android.settings.WIFI_SETTINGS"
+            app:operationImage="@mipmap/wifi_4"
+            app:operationText="WLAN" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/hotspot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bluetooth"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/wlan"
+            app:operationImage="@mipmap/hotspot"
+            app:operationText="移动热点" />
+
+        <com.xpping.windows10.widget.OperationItemView
+            android:id="@+id/flight_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bluetooth"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hotspot"
+            app:operationAction="android.settings.AIRPLANE_MODE_SETTINGS"
+            app:operationImage="@mipmap/flight_mode"
+            app:operationText="飞行模式" />
+    </RelativeLayout>
+</RelativeLayout>

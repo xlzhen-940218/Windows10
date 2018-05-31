@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listView"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:divider="@null"
+    android:scrollbars="none"
+    android:listSelector="@android:color/transparent"
+    android:background="@drawable/menu_select_bg"/>

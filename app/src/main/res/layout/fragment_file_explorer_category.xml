@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/file_browse_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
+
+        <!-- path -->
+        <LinearLayout
+            android:id="@+id/navigation_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/current_path_pane"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/path_pane_bg"
+                    android:gravity="center_vertical"
+                    android:maxWidth="300dip">
+
+                    <LinearLayout
+                        android:id="@+id/current_path_scroller"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/current_path_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="start"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text="sdcard"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/path_pane_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/path_pane_up_level"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="5dip"
+                android:src="@drawable/path_up_level" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/file_path_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/favorite_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/empty_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/blank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="没有文件"
+                    android:textColor="#e2e2e2"
+                    android:textSize="27dp" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/dropdown_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dropdown"
+                android:overScrollMode="never"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/dropdown_navigation_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/sd_not_available_page"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="35dp"
+                    android:src="@drawable/sd_not_available" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="无可用SD卡，请插入或连接SD卡"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/category_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/category_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/music_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/music_folder" />
+
+                        <TextView
+                            android:id="@+id/music_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/music_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_music"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/video_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/video_folder" />
+
+                        <TextView
+                            android:id="@+id/video_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/video_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_video"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/pic_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/picture_folder" />
+
+                        <TextView
+                            android:id="@+id/pic_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pic_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_picture"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_apk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_picture"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/apk_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/download_folder" />
+
+                        <TextView
+                            android:id="@+id/apk_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/apk_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_apk"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_document"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_picture"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/doc_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/document_folder" />
+
+                        <TextView
+                            android:id="@+id/doc_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doc_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_document"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/category_picture"
+                        android:background="@drawable/disk_background">
+
+                        <ImageView
+                            android:id="@+id/fav_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="3dp"
+                            android:src="@mipmap/folder_fav" />
+
+
+                        <TextView
+                            android:id="@+id/fav_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fav_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/category_favorite"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/disk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_favorite"
+                        android:background="@drawable/disk_background"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/sdcard_img"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_margin="10dp"
+                            android:src="@mipmap/sdcard_built_in" />
+
+                        <TextView
+                            android:id="@+id/sdcard_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/sdcard_img"
+                            android:layout_toRightOf="@+id/sdcard_img"
+                            android:text="本地磁盘(/mnt/sdcard/)"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                        <ProgressBar
+                            android:id="@+id/category_bar"
+                            style="@style/ProgressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"
+                            android:layout_above="@+id/sd_card_type"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/sdcard_img" />
+
+                        <TextView
+                            android:id="@+id/sd_card_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/sdcard_img"
+                            android:layout_toRightOf="@+id/sdcard_img"
+                            android:text="1.5G可用，共15G"
+                            android:textColor="#6d6d6d"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/disk">
+
+                        <ImageView
+                            android:id="@+id/icon_music"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/icon_music" />
+
+                        <TextView
+                            android:id="@+id/category_legend_music"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icon_music"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_video"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/icon_video" />
+
+                        <TextView
+                            android:id="@+id/category_legend_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icon_video"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_picture"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/icon_music"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/icon_picture" />
+
+                        <TextView
+                            android:id="@+id/category_legend_picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/icon_picture"
+                            android:layout_toRightOf="@+id/icon_picture"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_document"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/icon_music"
+                            android:src="@mipmap/icon_document" />
+
+                        <TextView
+                            android:id="@+id/category_legend_document"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/icon_document"
+                            android:layout_toRightOf="@+id/icon_document"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_apk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/icon_picture"
+                            android:src="@mipmap/icon_apk" />
+
+                        <TextView
+                            android:id="@+id/category_legend_apk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/icon_apk"
+                            android:layout_toRightOf="@+id/icon_apk"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_other"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/icon_picture"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/icon_other" />
+
+                        <TextView
+                            android:id="@+id/category_legend_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/icon_other"
+                            android:layout_toRightOf="@+id/icon_other"
+                            android:padding="4dp"
+                            android:textColor="#222"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/moving_operation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/button_moving_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/button_moving_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

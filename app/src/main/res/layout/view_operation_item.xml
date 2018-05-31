@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/operation_item"
+    android:layout_width="80dp"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/operation_item_bg">
+    <ImageView
+        android:id="@+id/operation_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:paddingLeft="1dp"
+        android:paddingTop="4dp"
+        android:src="@mipmap/tablet_mode"/>
+    <TextView
+        android:id="@+id/operation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentBottom="true"
+        android:text="平板模式"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>

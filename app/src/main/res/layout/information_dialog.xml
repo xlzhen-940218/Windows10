@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="2">
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_location" />
+
+            <TextView
+                android:id="@+id/information_location"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_size" />
+
+            <TextView
+                android:id="@+id/information_size"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_modified" />
+
+            <TextView
+                android:id="@+id/information_modified"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_canread" />
+
+            <TextView
+                android:id="@+id/information_canread"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_canwrite" />
+
+            <TextView
+                android:id="@+id/information_canwrite"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="@string/file_info_ishidden" />
+
+            <TextView
+                android:id="@+id/information_ishidden"
+                style="?android:attr/textAppearanceSmall"
+                android:padding="3dip" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>
