@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_copy"
+        android:icon="@mipmap/copy"
+        app:showAsAction="always"
+        android:title="@string/operation_copy" />
+    <item
+        android:id="@+id/action_move"
+        android:icon="@mipmap/move"
+        app:showAsAction="always"
+        android:title="@string/operation_move" />
+    <item
+        android:id="@+id/action_select_all"
+        android:icon="@mipmap/selete_all"
+        app:showAsAction="always"
+        android:title="@string/operation_selectall" />
+    <item
+        android:id="@+id/action_send"
+        android:icon="@mipmap/send"
+        app:showAsAction="always"
+        android:title="@string/operation_send" />
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@mipmap/delete"
+        app:showAsAction="always"
+        android:title="@string/operation_delete" />
+    <item
+        android:id="@+id/action_copy_path"
+        android:title="@string/operation_copy_path" />
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@mipmap/cancel"
+        app:showAsAction="always"
+        android:title="@string/operation_cancel" />
+</menu>
